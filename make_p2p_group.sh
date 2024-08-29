@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo killall wpa_supplicant
+sudo rm rf /var/run/wpa_supplicant/*
 sleep 1
 sudo wpa_supplicant -Dnl80211 -iwlan0 -cconf/go_wpa_supplicant.conf -B
 sleep 1
