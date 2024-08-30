@@ -1,10 +1,13 @@
 #!/bin/bash
 
 sudo killall wpa_supplicant
-sudo rm rf /var/run/wpa_supplicant/*
+sudo rm -rf /var/run/wpa_supplicant/wlan0
+sudo pkill dhcpd
 sleep 1
 sudo wpa_supplicant -Dnl80211 -iwlan0 -cconf/go_wpa_supplicant.conf -B
 sleep 1
+
+sudo 
 
 sudo wpa_cli -iwlan0 p2p_group_add
 sleep 1
