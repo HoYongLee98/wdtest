@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Get the Ubuntu version
+UBUNTU_VERSION=$(grep 'VERSION_ID' /etc/os-release | cut -d '"' -f 2)
 
 if [ "$UBUNTU_VERSION" == "20.04" ]; then
 
